@@ -18,6 +18,12 @@ public class WhileJava {
         }while (contador<5);
 
         System.out.println("Contador do while " + contador);
+        System.out.println();
+
+        for(int cont = 0; cont < 5; cont++){
+            System.out.println("contador do for: " + cont);
+        }
+
 
     }
 }
