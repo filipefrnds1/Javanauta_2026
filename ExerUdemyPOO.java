@@ -6,22 +6,27 @@ public class ExerUdemyPOO {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        double xA,xB,xC,yA,yB,yC,pX,pY,areaX,areaY;
+        Triangulo x, y;
+        x = new Triangulo();
+        y = new Triangulo();
+
+        double pX,pY,areaX,areaY;
+        //double xA,xB,xC,yA,yB,yC,pX,pY,areaX,areaY;
 
         System.out.println("Enter the measures of triangle X: ");
-        xA = sc.nextDouble();
-        xB = sc.nextDouble();
-        xC = sc.nextDouble();
+        x.a = sc.nextDouble();
+        x.b = sc.nextDouble();
+        x.c = sc.nextDouble();
 
         System.out.println("Enter the measures of triangle Y: ");
-        yA = sc.nextDouble();
-        yB = sc.nextDouble();
-        yC = sc.nextDouble();
+        y.a = sc.nextDouble();
+        y.b = sc.nextDouble();
+        y.c = sc.nextDouble();
 
-        pX = (xA+xB+xC)/2;
-        pY = (yA+yB+yC)/2;
-        areaX = Math.sqrt(pX*(pX-xA)*(pX-xB)*(pX-xC));
-        areaY = Math.sqrt(pY*(pY-yA)*(pY-yB)*(pY-yC));
+        pX = (x.a+x.b+x.c)/2;
+        pY = (y.a+y.b+y.c)/2;
+        areaX = Math.sqrt(pX*(pX-x.a)*(pX-x.b)*(pX-x.c));
+        areaY = Math.sqrt(pY*(pY-y.a)*(pY-y.b)*(pY-y.c));
 
         System.out.printf("Triangle X area: %.4f%n", areaX);
         System.out.printf("Triangle Y area: %.4f%n", areaY);
