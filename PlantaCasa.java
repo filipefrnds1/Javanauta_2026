@@ -1,11 +1,15 @@
 public class PlantaCasa {
 
     //Atributos
-    int metragem;
-    int numeroQuartos;
-    int numeroBanheiros;
-    String cor;
-    String material;
+    public int metragem;
+    public int numeroQuartos;
+    public int numeroBanheiros;
+    public String cor;
+    public String material;
+
+    // public - pode ser acessado por qualquer classe
+    // private - pode ser acessado apenas na própria classe
+    // protected - pode ser acessado apenas no mesmo pacote/pasta
 
     public void construir(){
         System.out.println("A casa foi construida, as caracteristicas são: ");
