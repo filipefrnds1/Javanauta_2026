@@ -1,4 +1,4 @@
-public class PlantaCasa {
+public class PlantaCasa implements Construcao{
 
     //Atributos
     public int metragem;
@@ -11,6 +11,8 @@ public class PlantaCasa {
     // private - pode ser acessado apenas na própria classe
     // protected - pode ser acessado apenas no mesmo pacote/pasta
 
+    // anotação Override informa que o metodo vem de uma interface
+    @Override
     public void construir(){
         System.out.println("A casa foi construida, as caracteristicas são: ");
         System.out.println("Metragem " + metragem);
@@ -24,8 +26,14 @@ public class PlantaCasa {
         pintar();
     }
 
+    @Override
     public void pintar(){
         System.out.println("A casa foi pintada de " + cor);
+    }
+
+    @Override
+    public int calcularCustoConstrucao(int custoPorMetro) {
+        return metragem + custoPorMetro;
     }
 
     public int somarMetragem(){
